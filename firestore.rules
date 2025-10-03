@@ -1,0 +1,41 @@
+{
+  "rules": {
+    "users": {
+      "$userId": {
+        ".read": "$userId == auth.uid",
+        ".write": "$userId == auth.uid",
+        ".validate": "newData.hasChildren(['email', 'name', 'createdAt'])"
+      }
+    },
+    "subscription_boxes": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.admin == true",
+      "$boxId": {
+        ".validate": "newData.hasChildren(['name', 'type', 'price', 'rating'])"
+      }
+    },
+    "orders": {
+      "$userId": {
+        ".read": "$userId == auth.uid",
+        ".write": "$userId == auth.uid",
+        "$orderId": {
+          ".validate": "newData.hasChildren(['subscriptionBox', 'quantity', 'totalAmount', 'status'])"
+        }
+      }
+    },
+    "user_subscriptions": {
+      "$userId": {
+        ".read": "$userId == auth.uid",
+        ".write": "$userId == auth.uid",
+        ".validate": "newData.hasChildren(['subscriptionBox', 'status', 'startDate'])"
+      }
+    },
+    "reviews": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$reviewId": {
+        ".validate": "newData.hasChildren(['userId', 'subscriptionBoxId', 'rating', 'comment'])"
+      }
+    }
+  }
+}

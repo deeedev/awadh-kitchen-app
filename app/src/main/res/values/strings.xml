@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">The Awadh Kitchen</string>
+    
+    <!-- Authentication -->
+    <string name="create_account">Create an account</string>
+    <string name="enter_email_signup">Enter your email to sign up for this app.</string>
+    <string name="email_hint">email@domain.com</string>
+    <string name="btn_continue">Continue</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_apple">Continue with Apple</string>
+    <string name="terms_privacy">By clicking continue, you agree to our Terms of Service and Privacy Policy.</string>
+    
+    <!-- Home Screen -->
+    <string name="filter">Filter</string>
+    <string name="sort">Sort</string>
+    <string name="results_count">99 results</string>
+    <string name="gold_box">Gold Box</string>
+    <string name="silver_box">Silver Box</string>
+    <string name="rating_format">%1$.1f (%2$d reviews)</string>
+    <string name="price_format">$%1$d / Box</string>
+    <string name="select">Select</string>
+    
+    <!-- Checkout -->
+    <string name="checkout">Checkout</string>
+    <string name="shipping">SHIPPING</string>
+    <string name="add_shipping_address">Add shipping address</string>
+    <string name="delivery">DELIVERY</string>
+    <string name="free_standard_delivery">Free Standard 3-4 days</string>
+    <string name="payment">PAYMENT</string>
+    <string name="visa_card">Visa *1234</string>
+    <string name="promos">PROMOS</string>
+    <string name="apply_promo_code">Apply promo code</string>
+    <string name="items">ITEMS</string>
+    <string name="quantity_format">Quantity: %02d</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="subtotal_format">Subtotal (%1$d)</string>
+    <string name="shipping_total">Shipping total</string>
+    <string name="free">Free</string>
+    <string name="taxes">Taxes</string>
+    <string name="total">Total</string>
+    <string name="place_order">Place order</string>
+    
+    <!-- Profile -->
+    <string name="profile">Profile</string>
+    <string name="order">Order</string>
+    <string name="settings">Settings</string>
+    <string name="active_subscription">Active Subscription</string>
+    <string name="savings_format">%1$d%% Savings</string>
+    <string name="order_history">Order History</string>
+    
+    <!-- Navigation -->
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="transfer">Transfer</string>
+    <string name="wallet">Wallet</string>
+    
+    <!-- Common -->
+    <string name="loading">Loading...</string>
+    <string name="error">Error</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+</resources>
