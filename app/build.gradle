@@ -151,3 +151,15 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
     debugImplementation 'androidx.test:core:1.5.0'
 }
+
+kapt {
+    javacOptions {
+        // These options are required to make Kapt work with newer JDKs
+        option("--add-opens=java.base/java.lang=ALL-UNNAMED")
+        option("--add-opens=java.base/java.net=ALL-UNNAMED")
+        option("--add-opens=java.base/java.util=ALL-UNNAMED")
+        option("--add-opens=java.base/java.io=ALL-UNNAMED")
+        option("--add-opens=java.base/java.security=ALL-UNNAMED")
+        option("--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED")
+    }
+}
