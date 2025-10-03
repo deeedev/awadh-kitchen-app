@@ -26,7 +26,10 @@ import com.awadhkitchen.R
 import com.awadhkitchen.data.model.BoxType
 import com.awadhkitchen.data.model.SubscriptionBox
 import com.awadhkitchen.ui.theme.AwadhKitchenTheme
+import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.Work
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     onNavigateToCheckout: () -> Unit,

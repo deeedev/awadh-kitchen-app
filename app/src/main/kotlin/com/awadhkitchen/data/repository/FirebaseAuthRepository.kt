@@ -1,5 +1,6 @@
 package com.awadhkitchen.data.repository
 
+import com.awadhkitchen.data.model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage

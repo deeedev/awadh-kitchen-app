@@ -4,14 +4,17 @@ import android.os.Bundle
 import android.util.Log
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.crashlytics.ktx.crashlytics
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class AnalyticsManager @Inject constructor(
-    private val firebaseAnalytics: FirebaseAnalytics,
-    private val crashlytics: FirebaseCrashlytics
-) {
+class AnalyticsManager @Inject constructor() {
+
+    private val firebaseAnalytics: FirebaseAnalytics = Firebase.analytics
+    private val crashlytics: FirebaseCrashlytics = Firebase.crashlytics
 
     fun logEvent(eventName: String, parameters: Map<String, Any> = emptyMap()) {
         try {

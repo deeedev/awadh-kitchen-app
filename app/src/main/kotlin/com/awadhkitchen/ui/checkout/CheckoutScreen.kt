@@ -25,7 +25,10 @@ import com.awadhkitchen.data.model.Order
 import com.awadhkitchen.data.model.OrderStatus
 import com.awadhkitchen.data.model.SubscriptionBox
 import com.awadhkitchen.ui.theme.AwadhKitchenTheme
+import androidx.compose.material.icons.filled.ChevronRight
+import androidx.compose.material.icons.filled.Image
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CheckoutScreen(
     onNavigateBack: () -> Unit,

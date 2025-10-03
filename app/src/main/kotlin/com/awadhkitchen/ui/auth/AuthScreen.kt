@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.sp
 import com.awadhkitchen.R
 import com.awadhkitchen.ui.theme.AwadhKitchenTheme
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AuthScreen(
     onNavigateToHome: () -> Unit
@@ -181,7 +182,6 @@ fun SocialLoginButton(
             contentColor = MaterialTheme.colorScheme.primary
         ),
         border = ButtonDefaults.outlinedButtonBorder.copy(
-            brush = null,
             width = 1.dp
         )
     ) {
