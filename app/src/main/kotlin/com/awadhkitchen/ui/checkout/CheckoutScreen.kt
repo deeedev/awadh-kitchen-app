@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -35,20 +36,6 @@ fun CheckoutScreen(
     onOrderPlaced: () -> Unit
 ) {
     var isLoading by remember { mutableStateOf(false) }
-    
-    val sampleOrder = remember {
-        Order(
-            id = "1",
-            subscriptionBox = SubscriptionBox(
-                id = "1",
-                name = "Gold Box",
-                price = 55.0
-            ),
-            quantity = 1,
-            totalAmount = 21.98,
-            status = OrderStatus.PENDING
-        )
-    }
 
     AwadhKitchenTheme {
         Scaffold(
@@ -69,7 +56,7 @@ fun CheckoutScreen(
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 IconButton(onClick = onNavigateBack) {
-                                    Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                                 }
                                 Text(
                                     text = stringResource(R.string.checkout),

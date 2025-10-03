@@ -26,9 +26,66 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:275002880511:android:com.awadhkitchen.dev",
+        "android_client_info": {
+          "package_name": "com.awadhkitchen.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPEZnVypfyqaJMPzRG_54R71HXS4Z_6ZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275002880511:android:com.awadhkitchen.staging",
+        "android_client_info": {
+          "package_name": "com.awadhkitchen.staging"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPEZnVypfyqaJMPzRG_54R71HXS4Z_6ZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:275002880511:android:com.awadhkitchen.dev.debug",
         "android_client_info": {
           "package_name": "com.awadhkitchen.dev.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPEZnVypfyqaJMPzRG_54R71HXS4Z_6ZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275002880511:android:com.awadhkitchen.staging.debug",
+        "android_client_info": {
+          "package_name": "com.awadhkitchen.staging.debug"
         }
       },
       "oauth_client": [],

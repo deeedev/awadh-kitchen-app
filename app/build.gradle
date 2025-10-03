@@ -29,6 +29,7 @@ android {
     productFlavors {
         dev {
             dimension "environment"
+            applicationIdSuffix ".dev"
             versionNameSuffix "-dev"
             buildConfigField "String", "API_BASE_URL", '"https://dev-api.awadhkitchen.com"'
             buildConfigField "boolean", "ENABLE_LOGGING", "true"

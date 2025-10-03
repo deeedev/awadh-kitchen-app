@@ -64,16 +64,7 @@ fun AwadhKitchenNavigation(
         }
         
         composable(Screen.Profile.route) {
-            ProfileScreen(
-                onNavigateBack = {
-                    navController.popBackStack()
-                },
-                onLogout = {
-                    navController.navigate(Screen.Auth.route) {
-                        popUpTo(0) { inclusive = true }
-                    }
-                }
-            )
+            ProfileScreen()
         }
     }
 }

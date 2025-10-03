@@ -33,10 +33,7 @@ import androidx.compose.material.icons.filled.Wallet
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ProfileScreen(
-    onNavigateBack: () -> Unit,
-    onLogout: () -> Unit
-) {
+fun ProfileScreen() {
     val sampleOrders = remember {
         listOf(
             Order(
