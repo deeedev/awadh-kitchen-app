@@ -37,6 +37,7 @@ fun AuthScreen(
     var email by remember { mutableStateOf("") }
     var isLoading by remember { mutableStateOf(false) }
     val context = LocalContext.current
+    val signInState by viewModel.signInState.collectAsState()
 
     val googleSignInLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.StartActivityForResult(),
@@ -45,14 +46,27 @@ fun AuthScreen(
             try {
                 val account = task.getResult(ApiException::class.java)
                 Log.d("AuthScreen", "Google Sign-In successful: ${account?.email}")
-                // TODO: Use the account to sign in to your backend
-                onNavigateToHome()
+                account?.idToken?.let {
+                    viewModel.signInWithGoogle(it)
+                } ?: run {
+                    Log.e("AuthScreen", "Google Sign-In failed: idToken is null")
+                }
             } catch (e: ApiException) {
                 Log.e("AuthScreen", "Google Sign-In failed", e)
-                // Handle sign-in failure
             }
         }
     )
+
+    LaunchedEffect(signInState) {
+        when (signInState) {
+            is SignInState.Success -> onNavigateToHome()
+            is SignInState.Error -> {
+                Log.e("AuthScreen", "Firebase Sign-In failed: ${(signInState as SignInState.Error).message}")
+                // Optionally, show a snackbar or toast to the user
+            }
+            else -> {}
+        }
+    }
 
     AwadhKitchenTheme {
         Surface(

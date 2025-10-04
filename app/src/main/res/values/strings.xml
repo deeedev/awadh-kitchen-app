@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">The Awadh Kitchen</string>
-    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID</string>
     <!-- Authentication -->
     <string name="create_account">Create an account</string>
     <string name="enter_email_signup">Enter your email to sign up for this app.</string>
